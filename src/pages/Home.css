@@ -1,4 +1,142 @@
 .home {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+/* ------------------- HERO ------------------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.hero-left h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #083451;
+}
+
+.hero-left span {
+  color: #0b6fa4;
+}
+
+.hero-subtext {
+  font-size: 18px;
+  margin-top: 12px;
+  color: #4b5563;
+}
+
+.hero-buttons {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+}
+
+/* ------------------- WHY CHOOSE ------------------- */
+.why h2,
+.highlight h2,
+.cta h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #083451;
+  margin-bottom: 24px;
+}
+
+.why-boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.why-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  color: #083451;
+}
+
+.why-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* ------------------- PRODUCT HIGHLIGHT ------------------- */
+.highlight-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.highlight-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+/* ------------------- CTA ------------------- */
+.cta {
+  text-align: center;
+  background: linear-gradient(135deg, #eaf7ff, #ffffff);
+  padding: 60px 20px;
+  border-radius: 18px;
+}
+
+.btn-primary.large {
+  margin-top: 20px;
+}
+
+/* -------------- MOBILE RESPONSIVE ------------------- */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .hero-left h1 {
+    font-size: 32px;
+  }
+
+  .hero-subtext {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .why-boxes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .highlight-row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .highlight-card,
+  .why-card {
+    padding: 18px;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+}
+
+.home {
   padding: 40px 20px;
   max-width: 1200px;
   margin: auto;

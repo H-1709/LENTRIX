@@ -51,32 +51,31 @@ export default function Home() {
 
             {/* WHY AYLEN SECTION */}
             <section className="why">
-                <h2>Why Choose AYLEN?</h2>
+  <h2>Why Choose AYLEN?</h2>
 
-                <div className="why-boxes">
+  <div className="why-boxes">
+    <div className="why-card">
+      <h3>Premium Quality</h3>
+      <p>Products manufactured at WHO-GMP certified facilities.</p>
+    </div>
 
-                    <div className="why-card">
-                        <h3>Premium Quality</h3>
-                        <p>All products manufactured in WHO-GMP certified facilities.</p>
-                    </div>
+    <div className="why-card">
+      <h3>Doctor-Trusted</h3>
+      <p>Strong medical marketing network across specialties.</p>
+    </div>
 
-                    <div className="why-card">
-                        <h3>Doctor-Trusted</h3>
-                        <p>Strong medical marketing network across multiple specialties.</p>
-                    </div>
+    <div className="why-card">
+      <h3>Wide Product Range</h3>
+      <p>Tablets, syrups, capsules, injectables & nutraceuticals.</p>
+    </div>
 
-                    <div className="why-card">
-                        <h3>Wide Product Range</h3>
-                        <p>Tablets, syrups, capsules, injectables & nutraceuticals.</p>
-                    </div>
+    <div className="why-card">
+      <h3>Fast Distribution</h3>
+      <p>Reliable supply ensuring timely delivery.</p>
+    </div>
+  </div>
+</section>
 
-                    <div className="why-card">
-                        <h3>Fast Distribution</h3>
-                        <p>Reliable supply chain ensuring timely delivery to distributors.</p>
-                    </div>
-
-                </div>
-            </section>
 
             {/* PRODUCT HIGHLIGHT */}
             {/* <section className="highlight">
