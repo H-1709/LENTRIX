@@ -1,3 +1,42 @@
+.home {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 44px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #083451;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #4b5563;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+/* PHONE FIXES */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
+
 /* Hero Section */
 .hero {
   background: linear-gradient(120deg, #f0f7ff, #e6eef5, #f0f7ff);
