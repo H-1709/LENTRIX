@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./Navbar.css";
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -25,10 +25,10 @@ export default function Navbar() {
       {/* Nav Links */}
       <ul className={`nav-links ${open ? "open" : ""}`}>
         <li><NavLink to="/" end>Home</NavLink></li>
+        <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/products">Products</NavLink></li>
         <li><NavLink to="/distributors">Distributors</NavLink></li>
         <li><NavLink to="/career">Career</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
       </ul>
     </nav>
