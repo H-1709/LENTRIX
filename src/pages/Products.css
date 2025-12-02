@@ -18,7 +18,11 @@
 }
 
 /* SIDEBAR */
+
 .product-sidebar {
+  position: sticky;
+    top: 80px;   /* adjust based on your navbar height */
+    height: fit-content;
   background: #ffffff;
   padding: 20px;
   border-radius: 16px;
@@ -72,8 +76,6 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
-
-/* CARD */
 
 /* CARD */
 .product-card {
