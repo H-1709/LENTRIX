@@ -1,6 +1,7 @@
 import "./Footer.css";
 import logo from "../assets/logo.png";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin,FaPhone ,FaPhoneAlt,FaMailBulk } from "react-icons/fa";
+
 
 export default function Footer() {
   return (
@@ -39,8 +40,8 @@ export default function Footer() {
             Ahmedabad, Gujarat 380061
           </p>
 
-          <p className="footer-info">📞 +91 9909516525</p>
-          <p className="footer-info">✉️ aylenpharma@gmail.com</p>
+          <p className="footer-info"> <FaPhoneAlt></FaPhoneAlt>+91 9909516525</p>
+          <p className="footer-info"><FaMailBulk></FaMailBulk> aylenpharma@gmail.com</p>
         </div>
 
         {/* SOCIAL MEDIA */}

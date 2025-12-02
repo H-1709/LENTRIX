@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import amlenImg from "../assets/AMLEN-5.png";
+import xyzImg from "../assets/COFLEN-DX.png";
+import pantaylenImg from "../assets/P-LEN-DSR.png";
 
 
 export default function Home() {
@@ -11,7 +14,7 @@ export default function Home() {
     useEffect(() => {
         const id = setInterval(() => {
             setIndex((prev) => (prev + 1) % words.length);
-        }, 2000); // change word every 2 seconds
+        }, 1500); // change word every 2 seconds
 
         return () => clearInterval(id);
     }, []);
@@ -86,20 +89,20 @@ export default function Home() {
                 <div className="highlight-row">
 
                     <div className="highlight-card">
-                        <div className="h-img"></div>
+                        <img src={amlenImg} className="h-img" alt="AMLEN 5" />
                         <h4>AMLEN-5</h4>
                         <p>Amlodipine 5mg Tablets</p>
                     </div>
 
                     <div className="highlight-card">
-                        <div className="h-img"></div>
-                        <h4>COLD-LEN</h4>
+                        <img src={xyzImg} className="h-img" alt="XYZ Expectorant" />
+                        <h4>COFLEN</h4>
                         <p>Cough Relief Syrup</p>
                     </div>
 
                     <div className="highlight-card">
-                        <div className="h-img"></div>
-                        <h4>Pantaylen-D</h4>
+                        <img src={pantaylenImg} className="h-img" alt="Pantaylen D" />
+                        <h4>P-LEN-D</h4>
                         <p>Pantoprazole + Domperidone</p>
                     </div>
 
@@ -110,7 +113,7 @@ export default function Home() {
             <section className="cta">
                 <h2>Want to Partner With AYLEN?</h2>
                 <p>Join our growing network of distributors & healthcare providers.</p>
-                <Link to="/distributors" className="btn-primary large">
+                <Link to="/contact" className="btn-primary large">
                     Become a Distributor
                 </Link>
 

@@ -1,0 +1,144 @@
+/* ================================
+   CONTACT PAGE (AYLEN THEME)
+================================= */
+
+.contact-page {
+  background: #dfeefd; /* soft pharma blue */
+  padding: 60px 8%;
+  min-height: 100vh;
+}
+
+/* Page Title */
+.contact-page h1 {
+  text-align: center;
+  color: #1a4560;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* ================================
+       DISTRIBUTOR FORM SECTION
+================================= */
+
+.distributor-section {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 750px;
+  margin: 40px auto;
+  box-shadow: 0 4px 15px rgba(0, 60, 105, 0.12);
+  animation: fadeSlideUp 0.5s ease-out;
+}
+
+/* Section Title */
+.distributor-section h2 {
+  text-align: center;
+  color: #1a4560;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+/* Subtitle */
+.distributor-section p {
+  text-align: center;
+  color: #4b6575;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+/* FORM STYLING */
+.distributor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+/* Input + Textarea Common */
+.distributor-form input,
+.distributor-form textarea {
+  width: 100%;
+  background: #f0f7ff;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #bcd3e1;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Focus Effect */
+.distributor-form input:focus,
+.distributor-form textarea:focus {
+  border-color: #1a4560;
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(26, 69, 96, 0.2);
+  outline: none;
+}
+
+/* Textarea */
+.distributor-form textarea {
+  resize: none;
+  height: 130px;
+  border-radius: 14px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #1a6a90;
+  color: white;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+  width: 60%;
+  margin: 10px auto 0;
+  display: block;
+}
+
+.submit-btn:hover {
+  background: #155572;
+  transform: translateY(-2px);
+}
+
+/* Fade + Slide Animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+            RESPONSIVE
+================================= */
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .distributor-section {
+    padding: 28px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}

@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #ffffff;
+  background: #f9f9f9;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -32,9 +32,11 @@
 
 .nav-logo span {
   font-size: 1.1rem;
+  /* font-style: italic; */
+  color: #2b4053;
   font-weight: 600;
   white-space: nowrap;
-  color: var(--text-dark);
+  /* color: var(--text-dark); */
 }
 
 .nav-logo a {
