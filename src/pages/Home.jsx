@@ -78,7 +78,7 @@ export default function Home() {
 
 
             {/* PRODUCT HIGHLIGHT */}
-            {/* <section className="highlight">
+            <section className="highlight">
                 <h2>Our Best-Selling Medicines</h2>
 
                 <div className="highlight-row">
@@ -102,7 +102,7 @@ export default function Home() {
                     </div>
 
                 </div>
-            </section> */}
+            </section>
 
             {/* CTA SECTION */}
             <section className="cta">

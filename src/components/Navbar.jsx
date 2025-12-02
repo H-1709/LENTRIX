@@ -10,10 +10,12 @@ export default function Navbar() {
     <nav className="nav">
       {/* Logo */}
       <div className="nav-logo">
-        <Link to="/">
-          <img src={logo} alt="AYLEN Pharma" />
-        </Link>
-      </div>
+  <Link to="/">
+    <img src="/src/assets/logo.png" alt="AYLEN" />
+  </Link>
+  <span>AYLEN PHARMACEUTICALS Pvt. Ltd.</span>
+</div>
+
 
       {/* Hamburger for mobile */}
       <div className="hamburger" onClick={() => setOpen(!open)}>

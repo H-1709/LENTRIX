@@ -1,55 +1,217 @@
+/* ---------------------------------------------------
+   GLOBAL PAGE STYLING
+-----------------------------------------------------*/
 .about-page {
-  padding: 60px;
-  background: #FFFFFF;
+    width: 100%;
+    padding-top: 60px;
+    font-family: "Inter", sans-serif;
+    color: #0D3B66;
+    background: #f4f8fc;
 }
 
-/* HERO */
-.about-hero {
-  text-align: center;
-  margin-bottom: 40px;
+
+
+/* ---------------------------------------------------
+   HEADING STYLES
+-----------------------------------------------------*/
+.main-heading,
+.animated-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #0A3A58;
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.about-hero h1 {
-  font-size: 40px;
-  font-weight: 700;
-  color: #1B3A4B;
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 10px;
+.underline {
+    display: block;
+    height: 4px;
+    width: 80px;
+    background: linear-gradient(90deg, #0A79B4, #62C1FF);
+    margin: 10px auto 0;
+    border-radius: 50px;
+
+    /* ANIMATION */
+    animation: underlineSlide 2s infinite alternate ease-in-out;
 }
 
-.about-tagline {
-  font-size: 18px;
-  color: #2A6F97;
-  letter-spacing: 0.5px;
+@keyframes underlineSlide {
+    from { width: 60px; }
+    to { width: 120px; }
 }
 
-/* MAIN CONTENT */
-.about-content {
-  max-width: 850px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #4B5563;
+.sub-heading {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #32587A;
+    margin-bottom: 35px;
 }
 
-.about-content p {
-  margin-bottom: 24px;
-  animation: fadeIn 0.6s ease;
+
+/* ---------------------------------------------------
+   WHO WE ARE SECTION
+-----------------------------------------------------*/
+.who {
+    width: 85%;
+    margin: auto;
+    padding: 30px 0;
 }
 
-.about-content strong {
-  color: #1B3A4B;
-  font-weight: 700;
+.who-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #3a4f63;
+    max-width: 900px;
+    margin: auto;
 }
 
-/* Fade animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.who-text p {
+    margin-bottom: 14px;
+}
+
+
+
+/* ---------------------------------------------------
+   SPLIT SCREEN SECTION
+-----------------------------------------------------*/
+.split-section {
+    margin-top: 60px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 40px;
+    padding: 20px 0;
+}
+/* 
+.split-text {
+    flex: 1;
+} */
+
+/* .split-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.split-image {
+    flex: 1.1;
+    display: flex;
+    justify-content: center;
+}
+
+.split-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+} */
+
+
+
+/* ---------------------------------------------------
+   ICON SECTION (VISIONS / MISSION / STRENGTHS)
+-----------------------------------------------------*/
+.icon-section {
+    margin-top: 80px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+}
+
+.icon-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.icon-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.12);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background: #e5f3ff;
+    color: #0A79B4;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+
+.icon-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.icon-box p,
+.icon-box ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #3c556b;
+}
+
+.icon-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.icon-box ul li {
+    margin-bottom: 6px;
+}
+
+.mission-tagline {
+    margin-top: 8px;
+    font-style: italic;
+    color: #0A3A58;
+}
+
+
+
+/* ---------------------------------------------------
+   RESPONSIVE FIXES
+-----------------------------------------------------*/
+@media (max-width: 992px) {
+    .split-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .split-text p {
+        max-width: 95%;
+        margin: auto;
+    }
+
+    .split-image img {
+        width: 85%;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-heading,
+    .animated-title {
+        font-size: 2rem;
+    }
+
+    .who-text {
+        font-size: 1rem;
+    }
+
+    .icon-box {
+        padding: 20px;
+    }
 }

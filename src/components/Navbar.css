@@ -17,9 +17,30 @@
 /* =============================
    LOGO
 ============================= */
-.nav-logo img {
-  height: 42px;
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
 }
+
+.nav-logo img {
+  height: 45px;
+  width: auto; /* FIXES SQUEEZING */
+  object-fit: contain;
+}
+
+.nav-logo span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--text-dark);
+}
+
+.nav-logo a {
+  text-decoration: none !important; /* removes underline */
+}
+
 
 /* =============================
    NAV LINKS
