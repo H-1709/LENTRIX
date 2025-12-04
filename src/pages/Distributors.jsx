@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Distributors.css";
 import { distributors } from "../data/distributors";
-import indiaMap from "../assets/india-map.png"; // put your map img here
+// import indiaMap from "../assets/india-map.png"; // put your map img here
 
 export default function DistributorsPage() {
   const [openCity, setOpenCity] = useState(null);
@@ -19,12 +19,12 @@ export default function DistributorsPage() {
 
   return (
     <div className="map-page">
-
-      {/* MAP SECTION */}
+      <h1>DISTRIBUTION NETWORK</h1>
+      {/* MAP SECTION
       <div className="map-container">
         <img src={indiaMap} alt="India Map" className="map-img" />
         <h1 className="map-title">Distribution Network</h1>
-      </div>
+      </div> */}
 
       {/* CITY ACCORDION SECTIONS */}
       <div className="city-sections">

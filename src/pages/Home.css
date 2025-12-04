@@ -35,7 +35,7 @@ body, html {
     background: url("/src/assets/hero-medicine.png") center/cover no-repeat;
     background-color: #e8f3ff;
 
-    border-radius: 0px; /* Remove corner rounding → Prevents overflow */
+    /* border-radius: 20px; Remove corner rounding → Prevents overflow */
 }
 
 
@@ -227,8 +227,8 @@ body, html {
 .h-img {
      width: 100%;
   height: 220px;
-  object-fit: contain;      /* keeps full image visible */
-  background: #f6fafd;      /* soft pharma background */
+  object-fit: contain;      
+  background: #f6fafd;     
   border-radius: 16px 16px 0 0;
   padding: 10px;
   display: block;
