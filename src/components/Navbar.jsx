@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Navbar.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/logos1.png";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
@@ -14,7 +14,7 @@ export default function Navbar() {
       <div className="nav-left">
         <Link to="/" className="nav-logo">
           <img src={logo} alt="AYLEN Logo" />
-          <span>AYLEN PHARMACEUTICALS Pvt. Ltd.</span>
+          {/* <span>AYLEN PHARMACEUTICALS Pvt. Ltd.</span> */}
         </Link>
       </div>
 
