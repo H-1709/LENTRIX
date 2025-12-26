@@ -68,7 +68,6 @@ This project was created for **AYLEN Pharmaceutical Pvt. Ltd.**, featuring clean
 | **EmailJS / API** | Career form submissions |
 | **JavaScript ES6+** | Logic & functionality |
 
----
-
-## 📁 Project Structure
+## Backend will start at:
+ http://localhost:5000
 
