@@ -1,6 +1,6 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
-import "./Career.css";
+import "./career.css";
 
 export default function Career() {
   const [status, setStatus] = useState("");
