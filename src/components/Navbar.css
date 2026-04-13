@@ -1,95 +1,154 @@
-/* NAVBAR WRAPPER */
-.nav {
-  width: 100%;
-  padding: 12px 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #ffffff;
+.nav-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
 }
 
-/* LEFT SECTION */
+.nav {
+  position: relative;
+  width: 100%;
+  min-height: var(--nav-height, 72px);
+  padding: 0 clamp(1.25rem, 3vw, 2.25rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+
+  background: rgba(248, 250, 252, 0.02);
+  border-bottom: 1px solid transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    backdrop-filter 0.35s ease;
+}
+
+.nav--scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom-color: rgba(15, 39, 68, 0.10);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
 .nav-left {
-  flex: 1; /* LEFT takes space but stays aligned */
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
 }
 
-/* LOGO */
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
+  padding: 0.35rem 0;
 }
 
 .nav-logo img {
-  height: 45px;
+  height: clamp(54px, 5vw, 64px);
   width: auto;
+  object-fit: contain;
 }
 
-.nav-logo span {
-  font-size: 1rem;
-  font-weight: 600;
-  white-space: nowrap;
-  color: #2b4053;
-}
-
-/* CENTER - NAV LINKS */
 .nav-links {
-  flex: 1; /* CENTER takes equal space */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 26px;
+  gap: 0.25rem;
   list-style: none;
 }
 
 .nav-links a {
-  padding: 8px 16px;
-  border-radius: 50px;
-  color: #2b4053;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill);
+  color: var(--color-navy-900);
   text-decoration: none;
   font-weight: 500;
-  transition: 0.25s ease;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
-.nav-links a:hover,
+.nav-links a:hover {
+  background: rgba(3, 105, 161, 0.08);
+  color: var(--color-accent);
+}
+
 .nav-links a.active {
-  background: #e5f1ff;
-  color: #0056a3;
-  box-shadow: 0 3px 12px rgba(0, 86, 163, 0.35);
-  transform: translateY(-2px);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  box-shadow: inset 0 0 0 1px rgba(3, 105, 161, 0.18);
 }
 
-/* RIGHT - HAMBURGER */
 .hamburger {
-  font-size: 28px;
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
   cursor: pointer;
-  flex: 1;
-  text-align: right;
+  color: var(--color-navy-900);
+  transition: background-color var(--transition-base);
+}
+
+.hamburger:hover {
+  background: rgba(15, 39, 68, 0.06);
+}
+
+.hamburger-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 0 auto;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 @media (max-width: 900px) {
   .hamburger {
-    display: block;
+    display: flex;
   }
 
   .nav-links {
     position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 240px;
+    top: calc(var(--nav-height, 72px) + 8px);
+    right: clamp(1rem, 3vw, 2rem);
+    left: clamp(1rem, 3vw, 2rem);
+    width: auto;
+    max-width: 320px;
+    margin-left: auto;
     flex-direction: column;
-    background: #fff;
-    padding: 22px;
-    border-radius: 18px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    align-items: stretch;
+    gap: 0.25rem;
+    background: var(--color-surface);
+    padding: 0.75rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
     display: none;
   }
 
@@ -100,9 +159,6 @@
   .nav-links a {
     width: 100%;
     text-align: center;
+    padding: 0.65rem 1rem;
   }
-}
-.nav-logo img {
-  height: 70px;
-  width: auto;
 }

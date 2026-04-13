@@ -3,10 +3,10 @@
 -----------------------------------------------------*/
 .about-page {
     width: 100%;
-    padding-top: 60px;
-    font-family: "Inter", sans-serif;
-    color: #0D3B66;
-    background: #f4f8fc;
+    padding-top: clamp(2rem, 5vw, 3rem);
+    font-family: var(--font-body);
+    color: var(--color-navy-900);
+    background: var(--color-bg-subtle);
 }
 
 
@@ -16,9 +16,9 @@
 -----------------------------------------------------*/
 .main-heading,
 .animated-title {
-    font-size: 2.6rem;
-    font-weight: 700;
-    color: #0A3A58;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 600;
+    color: var(--color-navy-900);
     position: relative;
     text-align: center;
     margin-bottom: 10px;
@@ -26,9 +26,9 @@
 
 .underline {
     display: block;
-    height: 4px;
+    height: 3px;
     width: 80px;
-    background: linear-gradient(90deg, #0A79B4, #62C1FF);
+    background: linear-gradient(90deg, var(--color-accent), #7dd3fc);
     margin: 10px auto 0;
     border-radius: 50px;
 
@@ -44,7 +44,7 @@
 .sub-heading {
     text-align: center;
     font-size: 1.1rem;
-    color: #32587A;
+    color: var(--color-text-muted);
     margin-bottom: 35px;
 }
 

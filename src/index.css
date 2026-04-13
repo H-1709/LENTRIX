@@ -1,42 +1,186 @@
-* {
+/* ============================================================
+   LENTRIX — global design system (tokens + base)
+   ============================================================ */
+
+:root {
+  /* Pharma / enterprise palette */
+  --color-navy-950: #0a1628;
+  --color-navy-900: #0f2744;
+  --color-navy-800: #153a5c;
+  --color-teal-700: #155e75;
+  --color-teal-600: #0e7490;
+  --color-sky-600: #0369a1;
+  --color-sky-500: #0ea5e9;
+  --color-slate-900: #0f172a;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748b;
+  --color-slate-200: #e2e8f0;
+  --color-slate-100: #f1f5f9;
+  --color-slate-50: #f8fafc;
+  --color-white: #ffffff;
+
+  --color-bg: #eef2f7;
+  --color-bg-subtle: #f4f7fb;
+  --color-surface: #ffffff;
+  --color-primary: var(--color-navy-900);
+  --color-primary-hover: var(--color-navy-950);
+  --color-accent: var(--color-sky-600);
+  --color-accent-hover: #075985;
+  --color-accent-soft: #e0f2fe;
+  --color-text: var(--color-slate-900);
+  --color-text-muted: var(--color-slate-600);
+  --color-border: var(--color-slate-200);
+
+  /* Corporate typography: keep headings clean and professional */
+  --font-heading: "Inter", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.1);
+  --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.12);
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-section: clamp(3.25rem, 5vw, 4.75rem);
+
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.22s ease;
+  --transition-slow: 0.35s ease;
+
+  --content-max: 1180px;
+  --nav-height: 72px;
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.no-underline {
-    text-decoration: none !important;
-}
 
-.btn-primary,
-.btn-outline {
-    text-decoration: none !important; /* extra safety */
+html {
+  scroll-behavior: smooth;
 }
-
 
 body {
-  background: #f7fafd;
-  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.22;
+  color: var(--color-navy-900);
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+/* Shared buttons (pages may add modifiers like .large) */
+.btn-primary,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.65rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none !important;
+  border: 2px solid transparent;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: var(--color-white);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: var(--color-surface);
+  color: var(--color-accent);
+  border-color: rgba(3, 105, 161, 0.35);
+}
+
+.btn-outline:hover {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.btn-primary.large,
+.btn-outline.large {
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 16px;
+  width: 100%;
+  max-width: var(--content-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 4vw, 1.5rem);
+  padding-right: clamp(1rem, 4vw, 1.5rem);
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: #ddeafc;
-  color: #23475bd2;
+.site-main {
+  min-height: 60vh;
 }
 
-h1, h2, h3 {
-  font-family:Georgia, 'Times New Roman', Times, serif;
-}
 .fade-up {
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.8s ease forwards;
+  transform: translateY(16px);
+  animation: fadeUp 0.75s ease forwards;
 }
 
 @keyframes fadeUp {
@@ -44,25 +188,4 @@ h1, h2, h3 {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.hero {
-  padding: 120px 40px;
-  background: linear-gradient(120deg, #F5F7FA, #FFFFFF);
-}
-
-.hero h1 {
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  text-align: left;
-  font-size: 52px;
-  font-weight: 700;
-  color: #2f576d;
-  max-width: 700px;
-}
-
-.hero p {
-  max-width: 550px;
-  font-size: 18px;
-  margin: 20px 0 30px;
-  color: #415787;
 }

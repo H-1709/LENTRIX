@@ -1,10 +1,16 @@
-h1 {
-  margin-top: 20px;
+.map-page {
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 4vw, 1.5rem) clamp(2.5rem, 5vw, 3.5rem);
+  background: var(--color-bg);
+  min-height: 50vh;
+}
+
+.map-page h1 {
+  margin-top: 1.25rem;
   text-align: center;
-  font-size: 36px;
-  color: #08345c;
-  margin-bottom: 30px;
-  font-weight: 800;
+  font-size: clamp(1.75rem, 3vw, 2.125rem);
+  color: var(--color-navy-900);
+  margin-bottom: 1.75rem;
+  font-weight: 600;
 }
 
    /* CITY ACCORDION  */
@@ -15,32 +21,35 @@ h1 {
 }
 
 .city-block {
-  background: white;
-  border-radius: 16px;
-  margin-bottom: 22px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.35rem;
   overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-xs);
 }
 
 .city-header {
-  padding: 18px 22px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #08345c;
+  padding: 1.1rem 1.35rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-navy-900);
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  background: #f5f9ff;
+  background: var(--color-bg-subtle);
   align-items: center;
+  font-family: var(--font-body);
+  transition: background-color var(--transition-base);
 }
 
 .city-header:hover {
-  background: #eaf2ff;
+  background: var(--color-accent-soft);
 }
 
 .arrow {
-  font-size: 18px;
-  color: #08345c;
+  font-size: 1rem;
+  color: var(--color-accent);
 }
 
 /*CITY CONTENT (ANIMATED)*/
@@ -64,15 +73,17 @@ h1 {
 }
 
 .dist-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 20px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .dist-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Slide-in animation */
@@ -110,15 +121,17 @@ h1 {
 }
 
 .call-btn {
-  background: #1f72d2;
+  background: var(--color-accent);
 }
 
 .email-btn {
-  background: #0da6a7;
+  background: var(--color-teal-600);
 }
 
-.call-btn:hover, .email-btn:hover {
-  opacity: 0.8;
+.call-btn:hover,
+.email-btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
 }
 
 /*MOBILE*/

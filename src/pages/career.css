@@ -1,21 +1,22 @@
 .career-page {
-  padding: 60px;
+  padding: clamp(2rem, 5vw, 3.5rem) 1.25rem;
   max-width: 600px;
   margin: auto;
 }
 
 .career-title {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: clamp(1.75rem, 3vw, 2.125rem);
+  font-weight: 600;
   text-align: center;
-  color: #1B3A4B;
-  margin-bottom: 10px;
+  color: var(--color-navy-900);
+  margin-bottom: 0.65rem;
 }
 
 .career-subtitle {
   text-align: center;
-  color: #6B7280;
-  margin-bottom: 40px;
+  color: var(--color-text-muted);
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
 }
 
 .career-form {
@@ -27,31 +28,41 @@
 .career-form input,
 .career-form select,
 .career-form textarea {
-  padding: 14px;
-  border: 2px solid #2A6F97;
-  border-radius: 10px;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   outline: none;
-  font-size: 15px;
+  font-size: 0.9375rem;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.career-form input:focus,
+.career-form select:focus,
+.career-form textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.12);
 }
 
 .career-btn {
-  background: #2A6F97;
-  color: white;
-  font-size: 18px;
-  padding: 12px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
   border: none;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color var(--transition-base), transform var(--transition-base);
 }
 
 .career-btn:hover {
-  background: #1B3A4B;
+  background: var(--color-accent-hover);
+  transform: translateY(-1px);
 }
 
 .career-status {
   text-align: center;
-  margin-top: 20px;
-  font-size: 16px;
-  color: #2A6F97;
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  color: var(--color-accent);
 }

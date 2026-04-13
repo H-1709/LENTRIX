@@ -1,71 +1,103 @@
 import "./Footer.css";
 import logo from "../assets/LENTRIX.jpeg";
-import { FaFacebook, FaInstagram, FaLinkedin,FaPhone ,FaPhoneAlt,FaMailBulk } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
+import { FaFacebook, FaLinkedin, FaPhoneAlt, FaMailBulk } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="footer">
+      <div className="footer-inner">
+        <div className="footer-top">
+          <div className="footer-brand">
+            <Link to="/" className="footer-logo-link">
+              <img src={logo} alt="LENTRIX Pharmaceutical" className="footer-logo" />
+            </Link>
+            <p className="footer-tagline">LENTRIX PHARMACEUTICAL PVT. LTD.</p>
+            <p className="footer-brand-note">
+              Quality-driven formulations for healthcare professionals and patients.
+            </p>
+          </div>
 
-      <div className="footer-top">
+          <div className="footer-section">
+            <h3 className="footer-heading">Quick links</h3>
+            <ul className="footer-links">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About us</Link>
+              </li>
+              <li>
+                <Link to="/products">Products</Link>
+              </li>
+              <li>
+                <Link to="/distributors">Distribution network</Link>
+              </li>
+              <li>
+                <Link to="/career">Careers</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+            </ul>
+          </div>
 
-        {/* LOGO + TAGLINE */}
-        <div className="footer-section">
-          <img src={logo} alt="LENTRIX Pharma" className="footer-logo" />
-          <p className="footer-tagline">
-            LENTRIX PHARMACEUTICAL PVT. LTD.
-          </p>
-        </div>
+          <div className="footer-section">
+            <h3 className="footer-heading">Get in touch</h3>
+            <p className="footer-address">
+              LENTRIX PHARMACEUTICAL PVT. LTD.
+              <br />
+              B - 31, First Floor, Dev Nandan Shopping Centre,
+              <br />
+              Nr. Morarji Desai Overbridge,
+              <br />
+              Chanakyapuri
+              <br />
+              Ahmedabad, Gujarat 380061
+            </p>
+            <p className="footer-info">
+              <FaPhoneAlt aria-hidden />
+              <a href="tel:+919909516525">+91 9909516525</a>
+            </p>
+            <p className="footer-info">
+              <FaMailBulk aria-hidden />
+              <a href="mailto:lentrixlifesciences@gmail.com">
+                lentrixlifesciences@gmail.com
+              </a>
+            </p>
+          </div>
 
-        {/* QUICK LINKS */}
-        <div className="footer-section">
-          <h3>QUICK LINKS</h3>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/distributors">Distribution Network</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-          </ul>
-        </div>
-
-        {/* CONTACT INFO */}
-        <div className="footer-section">
-          <h3>GET IN TOUCH</h3>
-          <p className="footer-address">
-            LENTRIX PHARMACEUTICAL PVT. LTD.<br />
-            B - 31, First Floor, Dev Nandan Shopping Centre,,<br />
-            Nr. Morarji Desai Overbridge,<br />
-            Chanakyapuri<br />
-            Ahmedabad, Gujarat 380061
-          </p>
-
-          <p className="footer-info"> <FaPhoneAlt></FaPhoneAlt>+91 9909516525</p>
-          <p className="footer-info"><FaMailBulk></FaMailBulk> lentrixlifesciences@gmail.com</p>
-        </div>
-
-        {/* SOCIAL MEDIA */}
-        <div className="footer-section">
-          <h3>SOCIAL MEDIA</h3>
-
-          <div className="footer-social">
-            <a href="https://www.facebook.com/lentrixpharma#" target="_blank">
-              <FaFacebook />
-            </a>
-
-            <a href="https://www.linkedin.com/in/ashish-rajyaguru-192a4222/" target="_blank">
-              <FaLinkedin />
-            </a>
+          <div className="footer-section">
+            <h3 className="footer-heading">Social</h3>
+            <p className="footer-social-intro">Connect with us</p>
+            <div className="footer-social">
+              <a
+                href="https://www.facebook.com/lentrixpharma#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <FaFacebook />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ashish-rajyaguru-192a4222/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
           </div>
         </div>
 
+        <div className="footer-bottom">
+          <span>
+            © {new Date().getFullYear()} LENTRIX Pharmaceutical Pvt. Ltd. All
+            rights reserved.
+          </span>
+        </div>
       </div>
-
-      {/* COPYRIGHT */}
-      <div className="footer-bottom">
-        Copyright © {new Date().getFullYear()} LENTRIX | All Rights Reserved
-      </div>
-
     </footer>
   );
 }
