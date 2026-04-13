@@ -19,7 +19,7 @@ export default function About() {
           <p>
             <strong>LENTRIX</strong> is a pharmaceutical company focused on delivering affordable
             healthcare to society. Our products are formulated based on three major
-            parameters — <strong>Quality, Innovation,</strong> and <strong>Affordability.</strong>
+            parameters - <strong>Quality, Innovation,</strong> and <strong>Affordability.</strong>
           </p>
 
           <p>
@@ -73,7 +73,7 @@ export default function About() {
           <h3>Our Vision</h3>
           <p>
             To be one of the most admired pharmaceutical companies in India.
-            We aspire to enrich our people — the driving force behind LENTRIX —
+            We aspire to enrich our people - the driving force behind LENTRIX -
             empowering them to achieve the highest standards of professional excellence.
           </p>
         </div>

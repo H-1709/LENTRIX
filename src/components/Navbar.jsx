@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Navbar.css";
-import logo from "../assets/logos1.png";
+import logo from "../assets/LENTRIX.jpeg";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {

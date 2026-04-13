@@ -1,5 +1,5 @@
 import "./Footer.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/LENTRIX.jpeg";
 import { FaFacebook, FaInstagram, FaLinkedin,FaPhone ,FaPhoneAlt,FaMailBulk } from "react-icons/fa";
 
 
@@ -34,9 +34,9 @@ export default function Footer() {
           <h3>GET IN TOUCH</h3>
           <p className="footer-address">
             LENTRIX PHARMACEUTICAL PVT. LTD.<br />
-            A-19, First Floor, Bhagyoday - 2,<br />
-            Near Pratham Hospital,<br />
-            Pawapuri Road, Ghatlodia,<br />
+            31, First Floor, Dev Nandan Shopping Centre,,<br />
+            Nr. Morarji Desai Overbridge,<br />
+            Chanakyapuri<br />
             Ahmedabad, Gujarat 380061
           </p>
 
@@ -51,10 +51,6 @@ export default function Footer() {
           <div className="footer-social">
             <a href="https://www.facebook.com/lentrixpharma#" target="_blank">
               <FaFacebook />
-            </a>
-
-            <a href="https://www.instagram.com/lentrixpharmaceutical/" target="_blank">
-              <FaInstagram />
             </a>
 
             <a href="https://www.linkedin.com/in/ashish-rajyaguru-192a4222/" target="_blank">

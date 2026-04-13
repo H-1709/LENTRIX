@@ -29,14 +29,14 @@ export default function Home() {
                     <h1>
                         Innovating Healthcare with Trusted Medicines
                     </h1>
+
+                    <p className="sub-tagline">
+                        <span className="tagline-small">“Driven By Science,inspired by life.”</span>
+                    </p>
+
                     <p className="tagline">
                         Bringing <span className="dynamic-word">{words[index]}</span> to life.
                     </p>
-
-                    <p className="sub-tagline">
-                        <span className="tagline-small">“HAPPIENESS TO LIFE”</span>
-                    </p>
-
                     <p className="hero-subtext">
                         LENTRIX PHARMACEUTICALS delivers high-quality, trusted medicines
                         through world-class manufacturing partners and a strong doctor-first approach.

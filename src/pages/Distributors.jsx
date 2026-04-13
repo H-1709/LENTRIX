@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./Distributors.css";
 import { distributors } from "../data/distributors";
+import { FaLocationArrow,FaPhone,FaEnvelope } from "react-icons/fa";
+
 // import indiaMap from "../assets/india-map.png"; // put your map img here
 
 export default function DistributorsPage() {
@@ -50,9 +52,9 @@ export default function DistributorsPage() {
                     className="dist-card slide-in"
                   >
                     <h3>{d.name}</h3>
-                    <p>📍 {d.city}</p>
-                    <p>📞 {d.phone}</p>
-                    <p>✉️ {d.email}</p>
+                    <p><FaLocationArrow /> {d.city}</p>
+                    <p><FaPhone /> {d.phone}</p>
+                    <p><FaEnvelope /> {d.email}</p>
 
                     <div className="card-actions">
                       <a href={`tel:${d.phone}`} className="call-btn">Call</a>

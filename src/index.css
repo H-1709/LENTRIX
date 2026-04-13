@@ -27,7 +27,7 @@ body {
 body {
   font-family: 'Inter', sans-serif;
   background: #ddeafc;
-  color: #1B3A4B;
+  color: #23475bd2;
 }
 
 h1, h2, h3 {
@@ -64,5 +64,5 @@ h1, h2, h3 {
   max-width: 550px;
   font-size: 18px;
   margin: 20px 0 30px;
-  color: #2b3b5d;
+  color: #415787;
 }

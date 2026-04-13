@@ -102,3 +102,7 @@
     text-align: center;
   }
 }
+.nav-logo img {
+  height: 70px;
+  width: auto;
+}
