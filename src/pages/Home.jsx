@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import heroMedicine from "../assets/hero-medicine.png";
 import mikalenHero from "../assets/MIKALEN.jpg";
 import zomylinHero from "../assets/ZOMYLIN-Q.jpg";
-import amlenImg from "../assets/AMLEN-5.png";
-import xyzImg from "../assets/COFLEN-DX.png";
-import pantaylenImg from "../assets/P-LEN-DSR.png";
+// import amlenImg from "../assets/AMLEN-5.png";
+// import xyzImg from "../assets/COFLEN-DX.png";
+// import pantaylenImg from "../assets/P-LEN-DSR.png";
 import certWho from "../assets/cert-who.png";
 import certFda from "../assets/cert-fda.png";
 import certGlp from "../assets/cert-glp.png";
@@ -188,8 +188,7 @@ export default function Home() {
           <div className="hero-right" data-reveal style={{ "--d": "180ms" }}>
             <aside className="identity-panel" aria-label="Company identity">
               <div className="identity-top">
-                <p className="identity-kicker">LENTRIX LIFESCIENCES</p>
-                <p className="identity-title">LENTRIX PHARMACEUTICAL</p>
+                <p className="identity-title">LENTRIX LIFESCIENCES</p>
                 <p className="identity-sub">
                   A quality-led pharmaceutical company focused on dependable
                   formulations and disciplined execution across markets.
@@ -417,7 +416,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="solutions section" aria-labelledby="highlight-heading">
+      {/* <section className="solutions section" aria-labelledby="highlight-heading">
         <div className="container">
           <div className="section-head" data-reveal>
             <h2 id="highlight-heading">Featured formulations</h2>
@@ -482,7 +481,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="cta section" aria-labelledby="cta-heading">
         <div className="container">

@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { FiDownload, FiFilter, FiMail, FiX } from "react-icons/fi";
 import "./Products.css";
 import { products, CATEGORY_LABELS } from "../data/products";
-import catalogImage from "../assets/logos1.png";
+import catalogImage from "../assets/LENTRIX.png";
 
 const imageModules = import.meta.glob("../assets/*.{png,jpg,jpeg}", {
   eager: true,

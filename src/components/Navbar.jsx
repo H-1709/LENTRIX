@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
-import logo from "../assets/LENTRIX.jpeg";
+import logo from "../assets/LENTRIX.png";
 import { Link, useLocation } from "react-router-dom";
 
 const SCROLL_THRESHOLD = 24;
@@ -48,6 +48,15 @@ export default function Navbar() {
           </li>
           <li>
             <Link
+              className={location.pathname === "/about" ? "active" : ""}
+              to="/about"
+              onClick={closeMenu}
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
               className={location.pathname === "/products" ? "active" : ""}
               to="/products"
               onClick={closeMenu}
@@ -75,15 +84,7 @@ export default function Navbar() {
               Career
             </Link>
           </li>
-          <li>
-            <Link
-              className={location.pathname === "/about" ? "active" : ""}
-              to="/about"
-              onClick={closeMenu}
-            >
-              About
-            </Link>
-          </li>
+          
           <li>
             <Link
               className={location.pathname === "/contact" ? "active" : ""}
