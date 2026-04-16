@@ -1,20 +1,18 @@
 import "./Footer.css";
-import logo from "../assets/LENTRIX.jpeg";
+import logo from "../assets/LENTRIX.png";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaLinkedin, FaPhoneAlt, FaMailBulk } from "react-icons/fa";
-import WhatsAppFloat from "./WhatsAppFloat";
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <WhatsAppFloat />
       <div className="footer-inner">
         <div className="footer-top">
           <div className="footer-brand">
             <Link to="/" className="footer-logo-link">
               <img src={logo} alt="LENTRIX Pharmaceutical" className="footer-logo" />
             </Link>
-            <p className="footer-tagline">LENTRIX PHARMACEUTICAL PVT. LTD.</p>
+            <p className="footer-tagline">LENTRIX LIFESCIENCES PVT. LTD.</p>
             <p className="footer-brand-note">
               Quality-driven formulations for healthcare professionals and patients.
             </p>
@@ -49,7 +47,7 @@ export default function Footer() {
             <p className="footer-address">
               LENTRIX PHARMACEUTICAL PVT. LTD.
               <br />
-              B - 31, First Floor, Dev Nandan Shopping Centre,
+              FF - 31, Dev Nandan Shopping Centre,
               <br />
               Nr. Morarji Desai Overbridge,
               <br />

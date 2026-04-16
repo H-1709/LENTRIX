@@ -150,8 +150,7 @@ export default function Home() {
           <div className="hero-right" data-reveal style={{ "--d": "180ms" }}>
             <aside className="identity-panel" aria-label="Company identity">
               <div className="identity-top">
-                <p className="identity-kicker">LENTRIX LIFESCIENCES</p>
-                <p className="identity-title">LENTRIX PHARMACEUTICAL</p>
+                <p className="identity-title">LENTRIX LIFESCIENCES</p>
                 <p className="identity-sub">
                   A quality-led pharmaceutical company focused on dependable
                   formulations and disciplined execution across markets.
@@ -422,7 +421,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="solutions section" aria-labelledby="highlight-heading">
+      {/* <section className="solutions section" aria-labelledby="highlight-heading">
         <div className="container">
           <div className="section-head" data-reveal>
             <h2 id="highlight-heading">Featured formulations</h2>
@@ -487,7 +486,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="cta section" aria-labelledby="cta-heading">
         <div className="container">

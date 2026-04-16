@@ -9,6 +9,7 @@ import Distributors from "./pages/Distributors";
 import Career from "./pages/Career";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
 
       <Footer />
       <ScrollToTop />
+      <WhatsAppFloat />
     </BrowserRouter>
   );
 }

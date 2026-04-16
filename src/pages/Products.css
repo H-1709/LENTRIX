@@ -255,6 +255,12 @@
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.load-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 .no-products {
