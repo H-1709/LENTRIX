@@ -3,10 +3,13 @@ import { motion } from "framer-motion";
 import "./Products.css";
 import { products, CATEGORY_LABELS } from "../data/products";
 
-const images = import.meta.glob("../assets/*.{png,jpg,jpeg}", {
+const imageModules = import.meta.glob("../assets/*.{png,jpg,jpeg}", {
   eager: true,
-  as: "url",
 });
+
+const images = Object.fromEntries(
+  Object.entries(imageModules).map(([path, mod]) => [path, mod.default])
+);
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
