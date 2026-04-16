@@ -139,6 +139,28 @@
   font-family: var(--font-body);
 }
 
+.load-more-wrap {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.load-more-btn {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-accent);
+  color: var(--color-white);
+  padding: 0.7rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.load-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
 
 /* RESPONSIVE */
 @media (max-width: 1000px) {

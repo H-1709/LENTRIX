@@ -1,16 +1,20 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import "./Products.css";
 import { products, CATEGORY_LABELS } from "../data/products";
 
-const images = import.meta.glob("../assets/*.{png,jpg,jpeg}", {
+const imageModules = import.meta.glob("../assets/*.{png,jpg,jpeg}", {
   eager: true,
-  as: "url",
 });
 
+const images = Object.fromEntries(
+  Object.entries(imageModules).map(([path, mod]) => [path, mod.default])
+);
+
 export default function ProductsPage() {
+  const PAGE_SIZE = 9;
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [search, setSearch] = useState("");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const categories = ["all",
     "lipid-lowering",
@@ -33,12 +37,11 @@ export default function ProductsPage() {
     return matchCat && matchSearch;
   });
 
+  const visibleProducts = filtered.slice(0, visibleCount);
+
   return (
-    <motion.div
+    <div
       className="products-page"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
     >
       <h1 className="products-title">Our Product Portfolio</h1>
 
@@ -51,7 +54,10 @@ export default function ProductsPage() {
               <li
                 key={cat}
                 className={cat === selectedCategory ? "active" : ""}
-                onClick={() => setSelectedCategory(cat)}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setVisibleCount(PAGE_SIZE);
+                }}
               >
                 {CATEGORY_LABELS[cat]}
               </li>
@@ -63,27 +69,28 @@ export default function ProductsPage() {
             className="product-search"
             placeholder="Search by brand or molecule..."
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => {
+              setSearch(e.target.value);
+              setVisibleCount(PAGE_SIZE);
+            }}
           />
         </aside>
 
         {/* GRID */}
         <section className="product-grid">
-          {filtered.map((p) => {
+          {visibleProducts.map((p) => {
             const pngKey = `../assets/${p.slug}.png`;
             const jpgKey = `../assets/${p.slug}.jpg`;
             const imgSrc = images[pngKey] || images[jpgKey];
 
             return (
-              <motion.div
+              <div
                 key={p.id}
                 className="product-card"
-                whileHover={{ translateY: -6, boxShadow: "0 14px 32px rgba(0,0,0,0.16)" }}
-                transition={{ type: "spring", stiffness: 200 }}
               >
                 <div className="product-img-wrap">
                   {imgSrc ? (
-                    <img src={imgSrc} alt={p.brand} />
+                    <img src={imgSrc} alt={p.brand} loading="lazy" decoding="async" />
                   ) : (
                     <div className="product-img-placeholder">
                       {p.brand}
@@ -92,7 +99,7 @@ export default function ProductsPage() {
                 </div>
                 <h4>{p.brand}</h4>
                 <p>{p.molecule}</p>
-              </motion.div>
+              </div>
             );
           })}
 
@@ -101,6 +108,18 @@ export default function ProductsPage() {
           )}
         </section>
       </div>
-    </motion.div>
+
+      {visibleCount < filtered.length && (
+        <div className="load-more-wrap">
+          <button
+            type="button"
+            className="load-more-btn"
+            onClick={() => setVisibleCount((current) => current + PAGE_SIZE)}
+          >
+            Load more products
+          </button>
+        </div>
+      )}
+    </div>
   );
 }
