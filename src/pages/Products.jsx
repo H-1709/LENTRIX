@@ -28,10 +28,6 @@ export default function ProductsPage() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const categories = ["all", ...Object.keys(CATEGORY_LABELS).filter((key) => key !== "all")];
-    "cad-therapy",
-    "vitamin-antacids",
-    "nsaids-others",
-  ];
 
   const filtered = useMemo(
     () =>
