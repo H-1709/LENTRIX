@@ -2,10 +2,12 @@ import "./Footer.css";
 import logo from "../assets/LENTRIX.jpeg";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaLinkedin, FaPhoneAlt, FaMailBulk } from "react-icons/fa";
+import WhatsAppFloat from "./WhatsAppFloat";
 
 export default function Footer() {
   return (
     <footer className="footer">
+      <WhatsAppFloat />
       <div className="footer-inner">
         <div className="footer-top">
           <div className="footer-brand">

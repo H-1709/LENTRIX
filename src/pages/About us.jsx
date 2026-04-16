@@ -1,4 +1,6 @@
 import "./About.css";
+import CertificationShowcase from "../components/CertificationShowcase";
+import { CERTIFICATIONS } from "../data/certifications";
 
 export default function About() {
   return (
@@ -106,6 +108,22 @@ export default function About() {
           </ul>
         </div>
 
+      </section>
+
+      <section className="about-certifications">
+        <div className="about-cert-head">
+          <h2 className="animated-title">
+            Compliance &amp; Quality Framework
+            <span className="underline"></span>
+          </h2>
+          <p className="sub-heading">
+            The same quality benchmarks trusted on our Home page, presented in
+            a compact format for About.
+          </p>
+        </div>
+        <div className="about-cert-wrap">
+          <CertificationShowcase items={CERTIFICATIONS} variant="about" />
+        </div>
       </section>
 
     </div>
