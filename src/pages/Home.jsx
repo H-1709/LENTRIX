@@ -2,11 +2,8 @@ import { useMemo, useState, useEffect, useRef } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import heroMedicine from "../assets/hero-medicine.png";
-import mikalenHero from "../assets/MIKALEN.jpg";
-import zomylinHero from "../assets/ZOMYLIN-Q.jpg";
-import amlenImg from "../assets/AMLEN-5.png";
-import xyzImg from "../assets/COFLEN-DX.png";
-import pantaylenImg from "../assets/P-LEN-DSR.png";
+import background2 from "../assets/Background2.png";
+import background1 from "../assets/background.png";
 import CertificationShowcase from "../components/CertificationShowcase";
 import { CERTIFICATIONS } from "../data/certifications";
 import {
@@ -33,12 +30,12 @@ export default function Home() {
       },
       {
         key: "slide-2",
-        image: mikalenHero,
+        image: background2,
         alt: "Healthcare product portfolio and professional packaging",
       },
       {
         key: "slide-3",
-        image: zomylinHero,
+        image: background1,
         alt: "Pharmaceutical solutions for clinical outcomes",
       },
     ],
@@ -51,7 +48,7 @@ export default function Home() {
   useEffect(() => {
     const id = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length);
-    }, 1500);
+    }, 2500);
     return () => clearInterval(id);
   }, [words.length]);
 
@@ -65,7 +62,7 @@ export default function Home() {
 
     intervalRef.current = window.setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % slides.length);
-    }, 6500);
+    }, 2500);
 
     return () => {
       if (intervalRef.current) window.clearInterval(intervalRef.current);
@@ -102,6 +99,7 @@ export default function Home() {
   return (
     <div className="home">
       <section className="hero" aria-labelledby="hero-heading">
+      <div className="hero-fade" />
         <div className="hero-carousel" aria-hidden="true">
           {slides.map((s, i) => (
             <div
@@ -175,6 +173,7 @@ export default function Home() {
               </ul>
             </aside>
           </div>
+          
         </div>
       </section>
 

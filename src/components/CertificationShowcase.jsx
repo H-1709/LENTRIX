@@ -1,35 +1,23 @@
 import "./CertificationShowcase.css";
 
-export default function CertificationShowcase({
-  items,
-  variant = "default",
-  className = "",
-}) {
+export default function CertificationShowcase({ items }) {
   return (
-    <ul
-      className={`cert-showcase cert-showcase--${variant} ${className}`.trim()}
-      aria-label="Certifications"
-    >
-      {items.map((c, idx) => (
-        <li
-          key={c.key}
-          className="cert-showcase-card"
+    <div className="cert-grid">
+      {items.map((item, index) => (
+        <div
+          className="cert-card"
+          key={index}
           data-reveal
-          style={{ "--d": `${idx * 70}ms` }}
+          style={{ "--d": `${index * 100}ms` }}
         >
-          <div className="cert-showcase-glow" aria-hidden="true" />
-          <div className="cert-showcase-top">
-            <div className="cert-showcase-badge">
-              <img src={c.badge} alt={`${c.title} ${c.subtitle}`} />
-            </div>
-            <div className="cert-showcase-meta">
-              <p className="cert-showcase-title">{c.title}</p>
-              <p className="cert-showcase-sub">{c.subtitle}</p>
-            </div>
+          <div className="cert-image">
+            <img src={item.image} alt={item.title} />
           </div>
-          <p className="cert-showcase-blurb">{c.blurb}</p>
-        </li>
+
+          <h3>{item.title}</h3>
+          <p>{item.desc}</p>
+        </div>
       ))}
-    </ul>
+    </div>
   );
 }

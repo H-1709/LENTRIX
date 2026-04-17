@@ -1,103 +1,110 @@
-.cert-showcase {
-  list-style: none;
+/* ===== GRID LAYOUT ===== */
+.cert-grid {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2.8rem;
+  margin-top: 3rem;
+  text-align: center;
 }
 
-.cert-showcase--default {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+/* ===== CARD ===== */
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
-.cert-showcase--about {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.cert-card:hover {
+  transform: translateY(-6px);
 }
 
-.cert-showcase-card {
+/* ===== IMAGE WRAPPER ===== */
+.cert-image {
   position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  padding: 1.15rem 1rem;
-  background:
-    linear-gradient(165deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 250, 252, 0.86) 100%);
-  border: 1px solid rgba(15, 39, 68, 0.11);
-  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.07);
-  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
-}
-
-.cert-showcase-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.12);
-  border-color: rgba(3, 105, 161, 0.22);
-}
-
-.cert-showcase-glow {
-  position: absolute;
   width: 120px;
   height: 120px;
-  border-radius: 999px;
-  top: -55px;
-  right: -55px;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.25), transparent 70%);
-}
-
-.cert-showcase-top {
+  border-radius: 50%;
+  background: white;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 0.75rem;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+
+  /* subtle depth */
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
-.cert-showcase-badge {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  background: #fff;
-  border: 1px solid rgba(15, 39, 68, 0.09);
-  display: grid;
-  place-items: center;
-}
-
-.cert-showcase-badge img {
-  width: 48px;
-  height: 48px;
+/* ===== IMAGE ===== */
+.cert-image img {
+  width: 80px;
+  height: 80px;
   object-fit: contain;
+  transition: transform 0.35s ease, filter 0.35s ease;
 }
 
-.cert-showcase-title {
+/* ===== HOVER EFFECT ===== */
+.cert-card:hover .cert-image img {
+  transform: scale(1.12);
+  filter: drop-shadow(0 10px 20px rgba(3, 105, 161, 0.25));
+}
+
+/* ===== GLOW RING ===== */
+.cert-image::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(3, 105, 161, 0.15),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cert-card:hover .cert-image::after {
+  opacity: 1;
+}
+
+/* ===== TITLE ===== */
+.cert-card h3 {
+  font-size: 1rem;
   font-weight: 800;
-  font-size: 0.93rem;
   color: var(--color-navy-900);
-  letter-spacing: 0.05em;
+  margin-bottom: 0.3rem;
 }
 
-.cert-showcase-sub {
-  margin-top: 0.15rem;
-  font-size: 0.72rem;
-  color: var(--color-accent);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  font-weight: 700;
-}
-
-.cert-showcase-blurb {
-  font-size: 0.88rem;
-  line-height: 1.55;
+/* ===== DESCRIPTION ===== */
+.cert-card p {
+  font-size: 0.85rem;
   color: var(--color-text-muted);
+  line-height: 1.5;
+  max-width: 200px;
 }
 
-@media (max-width: 1024px) {
-  .cert-showcase--default {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .cert-grid {
+    gap: 2rem;
   }
 
-  .cert-showcase--about {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .cert-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cert-image img {
+    width: 70px;
+    height: 70px;
   }
 }
 
-@media (max-width: 700px) {
-  .cert-showcase--default,
-  .cert-showcase--about {
-    grid-template-columns: 1fr;
+@media (max-width: 480px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
