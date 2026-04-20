@@ -22,10 +22,11 @@
 /* ===== IMAGE WRAPPER ===== */
 .cert-image {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: auto;
+  height: auto;
   border-radius: 50%;
-  background: white;
+  background: transparent;
+  box-shadow: none; /* optional: removes that soft white glow feel */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,8 +40,8 @@
 
 /* ===== IMAGE ===== */
 .cert-image img {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
   transition: transform 0.35s ease, filter 0.35s ease;
 }
@@ -93,8 +94,8 @@
   }
 
   .cert-image {
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: auto;
   }
 
   .cert-image img {
