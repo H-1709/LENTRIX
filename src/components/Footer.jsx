@@ -12,7 +12,7 @@ export default function Footer() {
             <Link to="/" className="footer-logo-link">
               <img src={logo} alt="LENTRIX Pharmaceutical" className="footer-logo" />
             </Link>
-            <p className="footer-tagline">LENTRIX LIFESCIENCES PVT. LTD.</p>
+            <p className="footer-tagline">LENTRIX LIFESCIENCES </p>
             <p className="footer-brand-note">
               Quality-driven formulations for healthcare professionals and patients.
             </p>
