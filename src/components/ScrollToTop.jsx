@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./ScrollToTop.css";
 import { FaArrowUp } from "react-icons/fa";
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => {
