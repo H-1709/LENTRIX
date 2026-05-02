@@ -49,7 +49,7 @@ export default function Contact() {
       <div className="distributor-section">
         <h2>Become a Distributor</h2>
         <p>
-          Interested in partnering with AYLEN Pharmaceuticals?  
+          Interested in partnering with Lentrix lifesciences?  
           Fill out the form below and our team will reach out shortly.
         </p>
 
