@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 import "./About.css";
 import CertificationShowcase from "../components/CertificationShowcase";
 import { CERTIFICATIONS } from "../data/certifications";
@@ -15,66 +25,59 @@ export default function About() {
         </h1>
 
         <p className="sub-heading">
-          Committed to Health. Driven by Innovation.
+          Driven By Science, Inspired By Life
         </p>
 
         <div className="who-text">
           <p>
-            <strong>LENTRIX</strong> is a company focused on delivering affordable
-            healthcare to society. Our products are formulated based on three major
-            parameters - <strong>Quality, Innovation,</strong> and <strong>Affordability.</strong>
+            <strong>LENTRIX LIFESCIENCES</strong> is one of the fastest growing pharmaceutical
+            company in India. Our branded generics business in India commands
+            a strong position in <strong>high-growth chronic therapies</strong> and <strong>strong positioning</strong> in
+            the acute segment. Over the past decade, we have been developing and
+            manufacturing affordable medicines for patients.
           </p>
 
           <p>
-            We are engaged in the mission of spreading good health and happiness by
-            offering reliable and affordable pharmaceutical formulations. Every
-            product reflects our dedication to strengthening healthcare outcomes.
+            Our innovation-led drug discovery processes ensure the health and well-being of people. 
+            Our enhanced investment in innovation and a strong track record in research and development 
+            have produced medical miracles that have changed lives and made a profound impact on real life.
           </p>
 
           <p>
-            LENTRIX is led by a team of seasoned professionals with deep expertise in
-            the healthcare domain. Our team works with a unidirectional and
-            patient-first approach, constantly striving to enhance lifestyle and
-            well-being.
-          </p>
-
-          <p>
-            At LENTRIX, <strong>people remain at the heart of our growth vision.</strong> Our
-            commitment to healthcare excellence drives every step we take.
+            Being a care-focused, research-driven company, we are committed to complying with the 
+            highest ethical standards in clinical research and medical practice. We want to be 
+            valued not only for our pharmaceutical products but also for the way we conduct our 
+            research and business activities.
           </p>
         </div>
       </section>
 
-      {/* ---------------- SPLIT SCREEN SECTION ---------------- */}
+      {/* ---------------- OWNER INFO SECTION ---------------- */}
       <section className="split-section">
         <div className="owner-profile">
           <div className="owner-photo-wrap">
-            <img src={ownerPhoto} alt="LENTRIX Owner" className="owner-photo" />
+            <img src={ownerPhoto} alt="Ashish Rajyaguru - Owner" className="owner-photo" />
           </div>
-          <div className="owner-badge">About Us</div>
         </div>
 
         <div className="split-text">
-          <h2 className="animated-title">
-            Our Commitment to Excellence
-            <span className="underline"></span>
-          </h2>
-
           <p>
-            At LENTRIX, we believe that good health is the foundation of a strong and
-            happy life. Our vision and mission revolve around creating high-quality,
-            accessible medicines for everyone.
+            <strong>LENTRIX</strong> is a leading pharmaceutical company based out of Ahmedabad 
+            which focuses on improving patient lives by identifying, developing, and commercializing 
+            innovative products that address diverse medical needs.
+          </p>
+          
+          <p>
+            <strong>LENTRIX LIFESCIENCES</strong> was founded by <strong>Mr. Ashish Rajyaguru</strong>, 
+            who is equipped with over <strong>15 years of proficiency</strong> in the pharmaceutical industry 
+            and expertise in leading functions right from research, manufacturing of formulations, 
+            Quality, and business development to Sales and marketing functions.
           </p>
         </div>
-
-        {/* <div className="split-image">
-          <img src="/src/assets/about-lab.jpg" alt="LENTRIX Laboratory" />
-        </div> */}
       </section>
 
-      {/* ---------------- ICON BLOCKS SECTION ---------------- */}
+      {/* ---------------- UPDATED CARD SECTION ---------------- */}
       <section className="icon-section">
-
         {/* Vision */}
         <div className="icon-box">
           <div className="icon-circle">
@@ -99,7 +102,7 @@ export default function About() {
             excellence in technology, service, and product quality.
           </p>
           <p className="mission-tagline">
-            Mission Statement: “Happiness to life by providing better health care solutions.”
+            "Happiness to life by providing better health care solutions."
           </p>
         </div>
 
@@ -109,27 +112,24 @@ export default function About() {
             <i className="fas fa-star"></i>
           </div>
           <h3>Our Strengths</h3>
-          <ul>
+          <ul className="strength-list">
             <li>Affordable formulations</li>
             <li>Quality-focused product basket</li>
             <li>Team of committed professionals</li>
           </ul>
         </div>
-
       </section>
 
+      {/* ---------------- CERTIFICATIONS SECTION ---------------- */}
       <section className="about-certifications">
         <div className="about-cert-head">
           <h2 className="animated-title">
             Compliance &amp; Quality Framework
             <span className="underline"></span>
           </h2>
-          <p className="sub-heading">
-            The same quality benchmarks trusted on our Home page, presented in
-            a compact format for About.
-          </p>
         </div>
         <div className="about-cert-wrap">
+          {/* Ensure CERTIFICATIONS array is not empty in your data file */}
           <CertificationShowcase items={CERTIFICATIONS} variant="about" />
         </div>
       </section>

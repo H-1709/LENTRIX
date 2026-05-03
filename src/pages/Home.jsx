@@ -148,14 +148,15 @@ export default function Home() {
             </p>
 
             <h1 id="hero-heading" data-reveal style={{ "--d": "80ms" }}>
-              Trusted formulations. Built for healthcare outcomes.
+              Driven By Science, Inspired By Life
             </h1>
 
             <p className="hero-subtext" data-reveal style={{ "--d": "140ms" }}>
-              LENTRIX LIFESCIENCES develops and markets quality-focused
-              formulations through world-class manufacturing partners—serving
-              prescribers, distributors, and patients with consistency and
-              integrity.
+              LENTRIX LIFESCIENCSE is one of the fastest growing pharmaceutical
+company in India, Our branded generics business in India commands
+strong position in high-growth chronic therapies and strong positioning in
+the acute segment, Over the past decade, we have been developing and
+manufacturing affordable medicines for the patients.
             </p>
 
             <div className="hero-buttons" data-reveal style={{ "--d": "220ms" }}>
@@ -308,7 +309,7 @@ export default function Home() {
       <section className="global section" aria-labelledby="global-heading">
         <div className="container global-inner">
           <div className="global-copy" data-reveal>
-            <h2 id="global-heading">Global presence &amp; export vision</h2>
+            <h2 id="global-heading">Global Presence &amp; Export Vision</h2>
             <p className="section-lead">
               We are building a future-ready distribution footprint—designed for
               compliance, traceability, and consistent product availability as we
