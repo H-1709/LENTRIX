@@ -13,8 +13,6 @@ import {
   FaTruck,
   FaGlobeAsia,
   FaRegCheckCircle,
-  FaMapMarkerAlt,
-  FaCapsules,
 } from "react-icons/fa";
 
 export default function Home() {
@@ -308,113 +306,32 @@ export default function Home() {
           </div>
 
           <div className="global-visual" aria-hidden="true" data-reveal>
-            <svg
-              className="world-map"
-              viewBox="0 0 980 460"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                <linearGradient id="ocean" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stopColor="#f8fbff" />
-                  <stop offset="1" stopColor="#eef6fd" />
-                </linearGradient>
-                <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stopColor="#d7e8f7" />
-                  <stop offset="1" stopColor="#c8def3" />
-                </linearGradient>
-              </defs>
-              <rect x="0" y="0" width="980" height="460" fill="url(#ocean)" />
+            <div className="network-orbit">
+              <div className="orbit-ring ring-1" />
+              <div className="orbit-ring ring-2" />
+              <div className="orbit-ring ring-3" />
 
-              <g opacity="0.16" stroke="#0f2744" strokeWidth="1">
-                <path d="M90 110h800" />
-                <path d="M90 200h800" />
-                <path d="M90 290h800" />
-                <path d="M90 380h800" />
-                <path d="M170 70v330" />
-                <path d="M320 70v330" />
-                <path d="M470 70v330" />
-                <path d="M620 70v330" />
-                <path d="M770 70v330" />
-              </g>
+              <div className="hub-core">
+                <p>India Hub</p>
+                <span>Trusted export coordination</span>
+              </div>
 
-              <g fill="url(#land)" stroke="rgba(15,39,68,0.12)" strokeWidth="1.2">
-                <path d="M104 117c37-31 76-52 120-62 55-12 128-7 177 16 34 16 58 38 64 63 6 28-10 54-43 68-26 12-58 16-91 16-26 0-44 8-58 21-22 21-46 33-76 33-35 1-67-14-90-37-27-28-37-56-31-82 5-22 16-30 28-36z" />
-                <path d="M290 258c17-11 37-13 56-7 27 9 42 30 39 56-3 28-18 53-40 74-16 15-33 20-52 14-20-7-33-24-36-48-5-34 4-66 33-89z" />
-                <path d="M492 134c24-20 47-29 75-30 33-1 63 11 78 30 10 13 8 29-7 42-15 13-35 19-56 18-18-1-37 5-50 15-18 12-35 16-52 11-15-4-24-16-26-33-2-22 10-40 38-53z" />
-                <path d="M517 191c31-21 63-27 93-18 31 9 51 30 58 60 8 32 0 63-23 89-23 26-51 39-83 39-30 1-57-9-75-30-19-21-27-49-22-78 5-27 20-50 52-62z" />
-                <path d="M595 112c42-31 86-45 130-45 56 0 117 26 150 69 22 30 27 61 13 91-15 33-51 56-92 61-35 4-64 17-86 38-24 22-59 34-95 32-35-2-65-16-86-42-20-24-29-54-24-84 5-34 30-67 90-120z" />
-                <path d="M792 308c18-12 40-17 61-14 20 2 36 14 42 31 7 19 2 35-16 50-17 14-38 21-60 21-20 0-37-7-49-21-12-14-16-31-10-48 4-9 15-14 32-19z" />
-              </g>
-
-              <path id="route-na" d="M620 216 C 530 165, 410 148, 282 170" />
-              <path id="route-eu" d="M620 216 C 586 172, 550 157, 518 156" />
-              <path id="route-af" d="M620 216 C 582 235, 553 257, 537 295" />
-              <path id="route-me" d="M620 216 C 656 208, 701 203, 746 208" />
-              <path id="route-ap" d="M620 216 C 695 234, 759 260, 824 326" />
-            </svg>
-
-            <svg
-              className="map-lines"
-              viewBox="0 0 980 460"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                className="export-path p1"
-                d="M620 216 C 530 165, 410 148, 282 170"
-                fill="none"
-                stroke="rgba(3,105,161,0.52)"
-                strokeWidth="2.2"
-                strokeDasharray="8 8"
-              />
-              <path
-                className="export-path p2"
-                d="M620 216 C 586 172, 550 157, 518 156"
-                fill="none"
-                stroke="rgba(14,116,144,0.48)"
-                strokeWidth="2.2"
-                strokeDasharray="8 8"
-              />
-              <path
-                className="export-path p3"
-                d="M620 216 C 582 235, 553 257, 537 295"
-                fill="none"
-                stroke="rgba(3,105,161,0.45)"
-                strokeWidth="2.2"
-                strokeDasharray="8 8"
-              />
-              <path
-                className="export-path p4"
-                d="M620 216 C 656 208, 701 203, 746 208"
-                fill="none"
-                stroke="rgba(15,39,68,0.35)"
-                strokeWidth="2.2"
-                strokeDasharray="8 8"
-              />
-              <path
-                className="export-path p5"
-                d="M620 216 C 695 234, 759 260, 824 326"
-                fill="none"
-                stroke="rgba(3,105,161,0.42)"
-                strokeWidth="2.2"
-                strokeDasharray="8 8"
-              />
-            </svg>
-
-            <div className="map-marker india">
-              <FaMapMarkerAlt />
-              <span>India Hub</span>
-            </div>
-            <div className="map-marker north-america" />
-            <div className="map-marker europe" />
-            <div className="map-marker africa" />
-            <div className="map-marker sea" />
-            <div className="map-marker oceania" />
-
-            <div className="map-medic map-medic-1">
-              <FaCapsules />
-            </div>
-            <div className="map-medic map-medic-2">
-              <FaCapsules />
+              <div className="node node-na">
+                <strong>North America</strong>
+                <span>Regulated channel readiness</span>
+              </div>
+              <div className="node node-eu">
+                <strong>Europe</strong>
+                <span>Compliance-aligned operations</span>
+              </div>
+              <div className="node node-mea">
+                <strong>MEA</strong>
+                <span>Scalable regional coverage</span>
+              </div>
+              <div className="node node-apac">
+                <strong>APAC</strong>
+                <span>Faster partner activation</span>
+              </div>
             </div>
           </div>
         </div>
