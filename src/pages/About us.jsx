@@ -1,7 +1,7 @@
 import "./About.css";
 import CertificationShowcase from "../components/CertificationShowcase";
 import { CERTIFICATIONS } from "../data/certifications";
-import ownerPhoto from "../assets/MIKALEN.jpg";
+import ownerPhoto from "../assets/Owner.png";
 
 export default function About() {
   return (

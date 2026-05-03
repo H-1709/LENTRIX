@@ -1,10 +1,10 @@
 import { useMemo, useState, useEffect, useRef } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
-import heroMedicine from "../assets/hero-medicine.png";
+import heroMedicine from "../assets/hero-medicine.jpg";
 import background2 from "../assets/Background2.png";
 import background1 from "../assets/background.png";
-import globalMedicineMap from "../assets/global-medicine-map.svg";
+// import globalMedicineMap from "../assets/global-medicine-map.svg";
 import CertificationShowcase from "../components/CertificationShowcase";
 import { CERTIFICATIONS } from "../data/certifications";
 import {
@@ -337,13 +337,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="global-visual" data-reveal>
+          {/* <div className="global-visual" data-reveal>
             <img
               src={globalMedicineMap}
               alt="Illustration of global medicine availability and distribution reach"
               className="global-visual-image"
             />
-          </div>
+          </div> */}
         </div>
       </section>
 
