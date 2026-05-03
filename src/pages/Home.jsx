@@ -313,25 +313,28 @@ export default function Home() {
 
               <div className="hub-core">
                 <p>India Hub</p>
-                <span>Trusted export coordination</span>
+                <span>Domestic base • global distributor onboarding plan</span>
               </div>
 
               <div className="node node-na">
                 <strong>North America</strong>
-                <span>Regulated channel readiness</span>
+                <span>Planned phase: identify compliant distributor partners</span>
               </div>
               <div className="node node-eu">
                 <strong>Europe</strong>
-                <span>Compliance-aligned operations</span>
+                <span>Planned phase: product dossier and partner alignment</span>
               </div>
               <div className="node node-mea">
                 <strong>MEA</strong>
-                <span>Scalable regional coverage</span>
+                <span>Planned phase: regional distributor discovery</span>
               </div>
               <div className="node node-apac">
                 <strong>APAC</strong>
-                <span>Faster partner activation</span>
+                <span>Planned phase: market mapping and onboarding pipeline</span>
               </div>
+
+              <div className="network-note note-1">Now: India operations</div>
+              <div className="network-note note-2">Next: Open to global distributors</div>
             </div>
           </div>
         </div>

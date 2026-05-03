@@ -538,6 +538,21 @@
 .node-mea { right: 9%; top: 30%; }
 .node-apac { right: 16%; bottom: 8%; }
 
+.network-note {
+  position: absolute;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.36rem 0.58rem;
+  border-radius: 999px;
+  border: 1px solid rgba(3, 105, 161, 0.18);
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--color-navy-800);
+}
+
+.note-1 { left: 7%; bottom: 10%; }
+.note-2 { right: 7%; top: 14%; }
+
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
