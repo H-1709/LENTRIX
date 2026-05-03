@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 import "./About.css";
 import CertificationShowcase from "../components/CertificationShowcase";
 import { CERTIFICATIONS } from "../data/certifications";
@@ -23,26 +13,20 @@ export default function About() {
           Who We Are
           <span className="underline"></span>
         </h1>
-
-        <p className="sub-heading">
-          Driven By Science, Inspired By Life
-        </p>
-
+        <p className="sub-heading">Driven By Science, Inspired By Life</p>
         <div className="who-text">
           <p>
             <strong>LENTRIX LIFESCIENCES</strong> is one of the fastest growing pharmaceutical
-            company in India. Our branded generics business in India commands
-            a strong position in <strong>high-growth chronic therapies</strong> and <strong>strong positioning</strong> in
-            the acute segment. Over the past decade, we have been developing and
-            manufacturing affordable medicines for patients.
+            companies in India. Our branded generics business in India commands a
+            strong position in <strong>high-growth chronic therapies</strong> and 
+            <strong>strong positioning</strong> in the acute segment. Over the past decade, 
+            we have been developing and manufacturing affordable medicines for patients.
           </p>
-
           <p>
             Our innovation-led drug discovery processes ensure the health and well-being of people. 
             Our enhanced investment in innovation and a strong track record in research and development 
             have produced medical miracles that have changed lives and made a profound impact on real life.
           </p>
-
           <p>
             Being a care-focused, research-driven company, we are committed to complying with the 
             highest ethical standards in clinical research and medical practice. We want to be 
@@ -52,7 +36,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* ---------------- OWNER INFO SECTION ---------------- */}
+      {/* ---------------- OWNER PROFILE SECTION ---------------- */}
       <section className="split-section">
         <div className="owner-profile">
           <div className="owner-photo-wrap">
@@ -66,7 +50,6 @@ export default function About() {
             which focuses on improving patient lives by identifying, developing, and commercializing 
             innovative products that address diverse medical needs.
           </p>
-          
           <p>
             <strong>LENTRIX LIFESCIENCES</strong> was founded by <strong>Mr. Ashish Rajyaguru</strong>, 
             who is equipped with over <strong>15 years of proficiency</strong> in the pharmaceutical industry 
@@ -76,7 +59,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* ---------------- UPDATED CARD SECTION ---------------- */}
+      {/* ---------------- VISION / MISSION / STRENGTH CARDS ---------------- */}
       <section className="icon-section">
         {/* Vision */}
         <div className="icon-box">
@@ -129,7 +112,6 @@ export default function About() {
           </h2>
         </div>
         <div className="about-cert-wrap">
-          {/* Ensure CERTIFICATIONS array is not empty in your data file */}
           <CertificationShowcase items={CERTIFICATIONS} variant="about" />
         </div>
       </section>
