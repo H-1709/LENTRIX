@@ -7,7 +7,7 @@ export default function CertificationShowcase({ items }) {
         <div
           className="cert-card"
           key={index}
-          data-reveal
+          // data-reveal
           style={{ "--d": `${index * 100}ms` }}
         >
           <div className="cert-image">
