@@ -86,6 +86,44 @@
     gap: 40px;
     padding: 20px 0;
 }
+
+.owner-profile {
+    flex-shrink: 0;
+    position: relative;
+    width: min(270px, 42vw);
+    display: flex;
+    justify-content: center;
+}
+
+.owner-photo-wrap {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 36px;
+    padding: 10px;
+    background: linear-gradient(160deg, #1b5f91, #42a5db);
+    box-shadow: 0 16px 28px rgba(10, 58, 88, 0.2);
+}
+
+.owner-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 28px;
+    border: 3px solid rgba(255, 255, 255, 0.85);
+}
+
+.owner-badge {
+    position: absolute;
+    top: -16px;
+    right: -10px;
+    background: #e9f5ff;
+    color: #0a3a58;
+    border: 3px solid #83c66d;
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(10, 58, 88, 0.2);
+}
 /* 
 .split-text {
     flex: 1;
@@ -214,6 +252,10 @@
     .split-section {
         flex-direction: column;
         text-align: center;
+    }
+
+    .owner-profile {
+        width: min(260px, 60vw);
     }
 
     .split-text p {
