@@ -1,6 +1,7 @@
 import "./About.css";
 import CertificationShowcase from "../components/CertificationShowcase";
 import { CERTIFICATIONS } from "../data/certifications";
+import ownerPhoto from "../assets/MIKALEN.jpg";
 
 export default function About() {
   return (
@@ -46,6 +47,13 @@ export default function About() {
 
       {/* ---------------- SPLIT SCREEN SECTION ---------------- */}
       <section className="split-section">
+        <div className="owner-profile">
+          <div className="owner-photo-wrap">
+            <img src={ownerPhoto} alt="LENTRIX Owner" className="owner-photo" />
+          </div>
+          <div className="owner-badge">About Us</div>
+        </div>
+
         <div className="split-text">
           <h2 className="animated-title">
             Our Commitment to Excellence
