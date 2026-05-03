@@ -94,6 +94,43 @@ export default function Home() {
     return () => io.disconnect();
   }, []);
 
+
+  useEffect(() => {
+    const nodes = document.querySelectorAll(".vision-node");
+    if (!nodes.length) return undefined;
+
+    const handlers = new Map();
+
+    nodes.forEach((node) => {
+      const onEnter = () => node.classList.add("is-node-active");
+      const onLeave = () => node.classList.remove("is-node-active");
+      handlers.set(node, { onEnter, onLeave });
+      node.addEventListener("mouseenter", onEnter);
+      node.addEventListener("mouseleave", onLeave);
+      node.addEventListener("focus", onEnter);
+      node.addEventListener("blur", onLeave);
+    });
+
+    return () => {
+      nodes.forEach((node) => {
+        const pair = handlers.get(node);
+        if (!pair) return;
+        node.removeEventListener("mouseenter", pair.onEnter);
+        node.removeEventListener("mouseleave", pair.onLeave);
+        node.removeEventListener("focus", pair.onEnter);
+        node.removeEventListener("blur", pair.onLeave);
+      });
+    };
+  }, []);
+
+  const exportRegions = [
+    { name: "North America", status: "Planned", orbit: "north-america" },
+    { name: "Europe", status: "Compliance Phase", orbit: "europe" },
+    { name: "MEA", status: "Dossier Alignment", orbit: "mea" },
+    { name: "APAC", status: "Planned", orbit: "apac" },
+  ];
+
+
   return (
     <div className="home">
       <section className="hero" aria-labelledby="hero-heading">
@@ -172,6 +209,46 @@ export default function Home() {
             </aside>
           </div>
           
+        </div>
+      </section>
+
+      <section className="export-vision section" aria-labelledby="export-vision-heading">
+        <div className="container">
+          <div className="row g-4 g-lg-5 align-items-center">
+            <div className="col-12 col-lg-5" data-reveal>
+              <p className="vision-kicker">Global Roadmap</p>
+              <h2 id="export-vision-heading">Global Strategy &amp; Export Vision</h2>
+              <p className="section-lead">
+                LENTRIX is currently anchored in Gujarat, India, with a quality-first
+                operating model designed around international documentation,
+                traceability, and regulatory expectations.
+              </p>
+              <p className="vision-note">
+                Gujarat-based infrastructure built for global standards.
+              </p>
+            </div>
+
+            <div className="col-12 col-lg-7" data-reveal style={{ "--d": "100ms" }}>
+              <div className="hub-shell">
+                <div className="hub-spokes" aria-hidden="true" />
+                <button type="button" className="vision-node vision-node--hub">
+                  <span>India Operations Hub</span>
+                  <small>(Gujarat)</small>
+                </button>
+
+                {exportRegions.map((region) => (
+                  <button
+                    type="button"
+                    key={region.name}
+                    className={`vision-node vision-node--orbit ${region.orbit}`}
+                  >
+                    <span>{region.name}</span>
+                    <em>{region.status}</em>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
