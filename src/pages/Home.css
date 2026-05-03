@@ -470,125 +470,88 @@
   overflow: hidden;
   border: 1px solid rgba(15, 39, 68, 0.14);
   box-shadow: 0 18px 36px rgba(15, 23, 42, 0.14);
-  background: #f6fbff;
-}
-
-.world-map {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.map-lines {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  pointer-events: none;
-}
-
-.export-path {
-  stroke-linecap: round;
-  stroke-dashoffset: 0;
-  animation: dash 7s linear infinite;
-}
-
-.export-path.p2 {
-  animation-delay: 420ms;
-}
-
-.export-path.p3 {
-  animation-delay: 740ms;
-}
-
-.export-path.p4 {
-  animation-delay: 950ms;
-}
-
-.export-path.p5 {
-  animation-delay: 1150ms;
-}
-
-@keyframes dash {
-  0% { stroke-dashoffset: 0; opacity: 0.5; }
-  45% { opacity: 1; }
-  100% { stroke-dashoffset: -160; opacity: 0.5; }
-}
-
-.map-marker {
-  position: absolute;
-  width: 11px;
-  height: 11px;
-  border-radius: 999px;
-  background: rgba(3, 105, 161, 0.95);
-  box-shadow: 0 10px 22px rgba(3, 105, 161, 0.24);
-}
-
-.map-marker::after {
-  content: "";
-  position: absolute;
-  inset: -14px;
-  border-radius: 999px;
-  border: 1px solid rgba(3, 105, 161, 0.35);
-  animation: pulse 2.6s ease-out infinite;
-}
-
-.map-marker.india {
-  width: auto;
-  height: auto;
-  background: rgba(15, 39, 68, 0.94);
-  border-radius: 999px;
-  left: 62.5%;
-  top: 46%;
-  padding: 0.35rem 0.62rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-
-.map-marker.india::after {
-  inset: -8px;
-  border-color: rgba(15, 39, 68, 0.32);
-}
-
-.map-marker.india svg {
-  font-size: 0.85rem;
-  color: #7dd3fc;
-}
-
-.map-marker.north-america { left: 28.6%; top: 36.6%; }
-.map-marker.europe { left: 52.4%; top: 34.5%; }
-.map-marker.africa { left: 54.2%; top: 61.4%; }
-.map-marker.sea { left: 76.1%; top: 44.8%; }
-.map-marker.oceania { left: 84%; top: 70.5%; }
-
-.map-medic {
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  border-radius: 999px;
+  background:
+    radial-gradient(460px 280px at 25% 20%, rgba(56, 189, 248, 0.18), transparent 70%),
+    radial-gradient(480px 280px at 80% 80%, rgba(3, 105, 161, 0.14), transparent 72%),
+    linear-gradient(160deg, #f8fcff 0%, #eff6ff 100%);
+  min-height: 430px;
   display: grid;
   place-items: center;
-  background: rgba(3, 105, 161, 0.12);
-  color: var(--color-accent);
-  border: 1px solid rgba(3, 105, 161, 0.24);
-  animation: float 3.8s ease-in-out infinite;
 }
 
-.map-medic-1 {
-  left: 44.2%;
-  top: 43.8%;
+.network-orbit {
+  width: min(92%, 900px);
+  height: min(80vw, 390px);
+  max-height: 390px;
+  position: relative;
 }
 
-.map-medic-2 {
-  left: 69.3%;
-  top: 58.7%;
-  animation-delay: 1.2s;
+.orbit-ring {
+  position: absolute;
+  inset: 12% 24%;
+  border: 1px dashed rgba(14, 116, 144, 0.28);
+  border-radius: 999px;
+  animation: spin 24s linear infinite;
 }
+
+.orbit-ring.ring-2 {
+  inset: 22% 13%;
+  animation-direction: reverse;
+  animation-duration: 30s;
+}
+
+.orbit-ring.ring-3 {
+  inset: 6% 35%;
+  animation-duration: 18s;
+}
+
+.hub-core,
+.node {
+  position: absolute;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(14, 116, 144, 0.17);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.10);
+  padding: 0.75rem 0.85rem;
+}
+
+.hub-core {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 190px;
+  text-align: center;
+  background: linear-gradient(155deg, rgba(15, 39, 68, 0.96), rgba(3, 105, 161, 0.92));
+  color: #f8fafc;
+  border-color: rgba(224, 242, 254, 0.4);
+}
+
+.hub-core p { font-weight: 800; font-size: 1rem; }
+.hub-core span { font-size: 0.78rem; opacity: 0.9; }
+
+.node { max-width: 170px; }
+.node strong { display: block; font-size: 0.83rem; color: var(--color-navy-900); }
+.node span { font-size: 0.72rem; color: var(--color-text-muted); line-height: 1.35; }
+
+.node-na { left: 4%; top: 22%; }
+.node-eu { left: 35%; top: 4%; }
+.node-mea { right: 9%; top: 30%; }
+.node-apac { right: 16%; bottom: 8%; }
+
+.network-note {
+  position: absolute;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.36rem 0.58rem;
+  border-radius: 999px;
+  border: 1px solid rgba(3, 105, 161, 0.18);
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--color-navy-800);
+}
+
+.note-1 { left: 7%; bottom: 10%; }
+.note-2 { right: 7%; top: 14%; }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -601,11 +564,14 @@
   100% { transform: scale(1); opacity: 0; }
 }
 
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-slide { transition: none; }
-  .map-marker::after { animation: none; opacity: 0.35; transform: none; }
-  .export-path { animation: none; }
-  .map-medic { animation: none; }
+  .orbit-ring { animation: none; }
 }
 
 /* ——— SOLUTIONS (editorial, not ecommerce) ——— */
