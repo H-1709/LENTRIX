@@ -2,9 +2,7 @@ import { useMemo, useState } from "react";
 import { FiDownload, FiFilter, FiMail, FiX } from "react-icons/fi";
 import "./Products.css";
 import { products, CATEGORY_LABELS } from "../data/products";
-import catalogImage from "../assets/Aylen_Pharmaceutical_Catalog.pdf";
-
-const imageModules = import.meta.glob("../assets/*.{png,jpg,jpeg}", {
+const imageModules = import.meta.glob("../assets/*.{webp,png,jpg,jpeg}", {
   eager: true,
 });
 
@@ -79,7 +77,7 @@ export default function ProductsPage() {
 
         <div className="products-cta-row">
           <a
-            href={catalogImage}
+            href="/Aylen_Pharmaceutical_Catalog.pdf"
             target="_blank"
             rel="noopener noreferrer"
             download="Lentrix-Product-List.pdf"
@@ -180,9 +178,10 @@ export default function ProductsPage() {
 
           <div className="product-grid">
             {visibleProducts.map((p) => {
+              const webpKey = `../assets/${p.slug}.webp`;
               const pngKey = `../assets/${p.slug}.png`;
               const jpgKey = `../assets/${p.slug}.jpg`;
-              const imgSrc = images[pngKey] || images[jpgKey];
+              const imgSrc = images[webpKey] || images[pngKey] || images[jpgKey];
               const mailSubject = encodeURIComponent(
                 `Product Enquiry - ${p.brand}`
               );
