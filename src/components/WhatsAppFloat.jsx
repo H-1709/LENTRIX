@@ -1,7 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 import "./WhatsAppFloat.css";
 
-const WHATSAPP_NUMBER = "919909516525";
+const WHATSAPP_NUMBER = "7990651097";
 const MESSAGE = encodeURIComponent(
   "Hello Lentrix Lifesciences, I would like to enquire about your products."
 );
