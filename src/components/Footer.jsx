@@ -57,7 +57,7 @@ export default function Footer() {
             </p>
             <p className="footer-info">
               <FaPhoneAlt aria-hidden />
-              <a href="tel:+919909516525">+91 9909516525</a>
+              <a href="tel:+917990651097">+91 7990651097</a>
             </p>
             <p className="footer-info">
               <FaMailBulk aria-hidden />
@@ -71,7 +71,7 @@ export default function Footer() {
             <h3 className="footer-heading">Social</h3>
             <p className="footer-social-intro">Connect with us</p>
             <div className="footer-social">
-              <a
+              {/* <a
                 href="https://www.facebook.com/lentrixpharma#"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -86,7 +86,7 @@ export default function Footer() {
                 aria-label="LinkedIn"
               >
                 <FaLinkedin />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
