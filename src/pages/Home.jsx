@@ -38,7 +38,7 @@ export default function Home() {
         alt: "Pharmaceutical solutions for clinical outcomes",
       },
     ],
-    []
+    [],
   );
 
   const [activeSlide, setActiveSlide] = useState(0);
@@ -88,13 +88,12 @@ export default function Home() {
           }
         }
       },
-      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
+      { threshold: 0.15, rootMargin: "0px 0px -10% 0px" },
     );
 
     elements.forEach((el) => io.observe(el));
     return () => io.disconnect();
   }, []);
-
 
   useEffect(() => {
     const nodes = document.querySelectorAll(".vision-node");
@@ -124,7 +123,6 @@ export default function Home() {
     };
   }, []);
 
-
   return (
     <div className="home">
       <section className="hero" aria-labelledby="hero-heading">
@@ -143,9 +141,11 @@ export default function Home() {
 
         <div className="hero-inner container">
           <div className="hero-left">
-            <h1><p className="hero-eyebrow" data-reveal style={{ "--d": "0ms" }}>
-              LENTRIX LIFESCIENCES
-            </p></h1>
+            <h1>
+              <p className="hero-eyebrow" data-reveal style={{ "--d": "0ms" }}>
+                LENTRIX LIFESCIENCES
+              </p>
+            </h1>
 
             <h1 id="hero-heading" data-reveal style={{ "--d": "80ms" }}>
               Driven By Science, Inspired By Life
@@ -154,12 +154,17 @@ export default function Home() {
             <p className="hero-subtext" data-reveal style={{ "--d": "140ms" }}>
               LENTRIX LIFESCIENCSE is one of the fastest growing pharmaceutical
               company in India, Our branded generics business in India commands
-              strong position in high-growth chronic therapies and strong positioning in
-              the acute segment, Over the past decade, we have been developing and
-              manufacturing affordable medicines for the patients.
+              strong position in high-growth chronic therapies and strong
+              positioning in the acute segment, Over the past decade, we have
+              been developing and manufacturing affordable medicines for the
+              patients.
             </p>
 
-            <div className="hero-buttons" data-reveal style={{ "--d": "220ms" }}>
+            <div
+              className="hero-buttons"
+              data-reveal
+              style={{ "--d": "220ms" }}
+            >
               <Link to="/products" className="btn-primary no-underline">
                 Explore products
               </Link>
@@ -180,8 +185,8 @@ export default function Home() {
               <div className="identity-top">
                 <p className="identity-title">LENTRIX LIFESCIENCES</p>
                 <p className="identity-sub">
-                  A quality-led company focused on dependable
-                  formulations and disciplined execution across markets.
+                  A quality-led company focused on dependable formulations and
+                  disciplined execution across markets.
                 </p>
               </div>
 
@@ -203,10 +208,8 @@ export default function Home() {
               </ul>
             </aside>
           </div>
-
         </div>
       </section>
-
 
       <section className="why section" aria-labelledby="why-heading">
         <div className="container">
@@ -252,7 +255,11 @@ export default function Home() {
               </div>
             </article>
 
-            <article className="why-card" data-reveal style={{ "--d": "140ms" }}>
+            <article
+              className="why-card"
+              data-reveal
+              style={{ "--d": "140ms" }}
+            >
               <div className="why-card-head">
                 <div className="why-icon" aria-hidden>
                   <FaFlask />
@@ -269,7 +276,11 @@ export default function Home() {
               </div>
             </article>
 
-            <article className="why-card" data-reveal style={{ "--d": "220ms" }}>
+            <article
+              className="why-card"
+              data-reveal
+              style={{ "--d": "220ms" }}
+            >
               <div className="why-card-head">
                 <div className="why-icon" aria-hidden>
                   <FaTruck />
@@ -311,9 +322,9 @@ export default function Home() {
           <div className="global-copy" data-reveal>
             <h2 id="global-heading">Global Presence &amp; Export Vision</h2>
             <p className="section-lead">
-              We are building a future-ready distribution footprint - designed for
-              compliance, traceability, and consistent product availability as we
-              expand to new markets.
+              We are building a future-ready distribution footprint - designed
+              for compliance, traceability, and consistent product availability
+              as we expand to new markets.
             </p>
 
             <ul className="global-points" data-reveal>
@@ -347,7 +358,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       <section className="cta section" aria-labelledby="cta-heading">
         <div className="container">
